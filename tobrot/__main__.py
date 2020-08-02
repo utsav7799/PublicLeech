@@ -76,7 +76,7 @@ if __name__ == "__main__" :
     # CANCEL command
     cancel_message_handler = MessageHandler(
         cancel_message_f,
-        filters=Filters.command(["CANCEL@Publicleechrobot"]) & Filters.chat(chats=AUTH_CHANNEL)
+        filters=Filters.command([Commandi.CANCEL]) & Filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(cancel_message_handler)
 
